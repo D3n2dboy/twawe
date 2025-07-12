@@ -1,0 +1,89 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+h1 {
+	font-weight: 700;
+	font-size: rem(40);
+}
+
+h2 {
+	font-weight: 500;
+	font-size: rem(36);
+}
+
+h3 {
+	font-weight: 500;
+	font-size: rem(36);
+}
+
+h4 {
+	font-weight: 500;
+	font-size: rem(32);
+}
+
+section {
+	&:not(:last-child) {
+		margin-bottom: rem(90);
+	}
+}
+
+.img-scale {
+	transition: transform 0.8s ease;
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+}
+
+.title {
+	font-size: rem(36);
+	font-weight: 500;
+}
+
+.sub-title {
+	color: $colorSilverDark;
+}
+
+/* SWIPER BUTTONS */
+
+.swiper-slide-prev {
+	opacity: 0;
+}
+
+.my-perw-button,
+.my-next-button {
+	position: relative;
+	width: rem(48);
+	height: rem(48);
+	border-radius: 50%;
+	border: 1px solid #000;
+	transition: background 0.3s ease, border 0.3s ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $colorYellow;
+			border-color: $colorYellow;
+		}
+	}
+
+	&::before {
+		@extend %ic;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: rem(30);
+	}
+}
+
+.my-perw-button {
+	&::before {
+		content: "\e901";
+	}
+}
+
+.my-next-button {
+	&::before {
+		content: "\e900";
+	}
+}

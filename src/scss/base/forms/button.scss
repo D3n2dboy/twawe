@@ -1,0 +1,114 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	position: relative;
+	display: inline-flex;
+	padding: rem(12) rem(21);
+	border-radius: $borderRadius;
+	border: 2px solid $colorYellow;
+	background-color: $colorYellow;
+	font-weight: 600;
+	min-width: rem(200);
+	text-align: center;
+	justify-content: center;
+	font-size: rem(16);
+	transition: all 0.3s ease;
+	white-space: nowrap;
+
+	&::before {
+		position: absolute;
+		top: 50%;
+		left: calc(100% + 9px);
+		//height: 100%;
+		z-index: 3;
+		font-size: rem(35);
+		transform: translateY(-50%);
+		transition: all 0.3s ease;
+	}
+
+	&._ar {
+		min-height: rem(44);
+		& span {
+			transition: transform 0.3s ease;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #fff;
+				border-radius: rem(30) 0 0 rem(30);
+			}
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #fff;
+			// border-radius: rem(30) 0 0 rem(30);
+
+			&._ar {
+				&::before {
+					left: 100%;
+				}
+				& span {
+					transform: translateX(5px);
+				}
+			}
+		}
+	}
+	&:active {
+		background-color: $colorYellowDark;
+	}
+
+	&:disabled {
+		background: $colorSilver;
+	}
+	&._fw {
+		width: 100%;
+	}
+	&._ar {
+		&::before {
+			@extend %ic;
+			content: "\e900";
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: calc(100% + 5px);
+			width: rem(48);
+			min-height: rem(47);
+			top: -2px;
+			border-radius: 50%;
+			border: 2px solid $colorYellow;
+			background-color: $colorYellow;
+			transition: all 0.3s ease;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					left: 100%;
+					background-color: #fff;
+					border-radius: 0 rem(30) rem(30) 0;
+					border-left: 0;
+				}
+			}
+		}
+	}
+
+	&._blue {
+		border: 2px solid $colorBlue;
+
+		background-color: $colorBlue;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #fff;
+			}
+		}
+
+		&:active {
+			background-color: $colorBlueDark;
+		}
+	}
+}

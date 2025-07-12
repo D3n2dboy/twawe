@@ -1,0 +1,38 @@
+<div id="popup-callback" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close _icon-close"></button>
+			<div class="popup__text">
+				<form class="popup-callback-form" action="#">
+					<div class="body-input">
+						<label class="label" for="name-client">ФИО *</label>
+						<input autocomplete="off" type="text" data-required required name="name-client"
+							data-error="Ошибка. Попробуйте снова" id="name-client" placeholder="Иванов Иван Иванович"
+							class="input">
+					</div>
+
+					<div class="body-input">
+						<label class="label" for="client-phone">Номер телефона *</label>
+						<input autocomplete="off" type="text" data-required required id="client-phone"
+							name="client-phone" data-error="Ошибка. Попробуйте снова" placeholder="+7(xxx)xxx-xx-xx"
+							class="input">
+					</div>
+
+					<div class="body-input">
+						<button type="submit" class="button _ar"><span>Отправить</span></button>
+					</div>
+
+					<div class="checkbox">
+						<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1"
+							name="form[]">
+						<label for="c_1" class="checkbox__label"><span class="checkbox__text">Нажимая кнопку
+								«Отправить»,
+								я даю согласие на обработку своих персональных данных и соглашаюсь с условиями
+								использования
+								и Политикой конфиденциальности</span></label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
