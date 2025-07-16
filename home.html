@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250714223807">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250716210343">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
 
 <body>
 	<div class="wrapper">
-		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250714223807" /> -->
+		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20250716210343" /> -->
 		<header data-scroll-show class="header">
 			<div class="header__container">
 				<a href="" class="header__logo">
@@ -42,10 +42,14 @@
 						</ul>
 					</nav>
 					<div class="menu__actions" data-da=".header__menu,992,2">
-						<a href="#" data-da=".menu__body,768,2" data-popup="#popup-callback" class="button _blue">Пригласить на
-							тендер</a>
-						<a href="#" data-da=".menu__body,768,2" data-popup="#popup-callback" class="button _blue">Заказать
-							звонок</a>
+						<button data-da=".menu__body,768,2" data-popup="#popup-callback" href="#" class="btn _blue">
+							<div class="btn__text">Пригласить на
+								тендер</div>
+						</button>
+						<button data-da=".menu__body,768,2" data-popup="#popup-callback" href="#" class="btn _blue">
+							<div class="btn__text">Заказать
+								звонок</div>
+						</button>
 						<button type="button" class="menu__icon icon-menu"><span></span></button>
 					</div>
 				</div>
@@ -58,7 +62,7 @@
 					<div class="prewiew__body">
 						<div class="prewiew__section section-prewiew">
 							<div class="section-prewiew__image-ibg">
-								<img data-src="img/main/00.jpg" alt="01">
+								<picture><source data-srcset="img/main/00.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/main/00.jpg" alt="01"></picture>
 							</div>
 							<h1 class="section-prewiew__title">
 								Профессиональная уборка
@@ -71,12 +75,15 @@
 							</p>
 
 							<div class="section-prewiew__buttons">
-								<a href="#" class="button _ar"><span>Заказать уборку</span></a>
+								<button href="#" class="btn _arr">
+									<div class="btn__text">Заказать уборку</div>
+									<div class="btn__icon"></div>
+								</button>
 							</div>
 						</div>
 						<div class="prewiew__section">
 							<div class="section-prewiew__image-ibg">
-								<img class="img-scale" data-src="img/main/01.jpg" alt="01">
+								<picture><source data-srcset="img/main/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="img-scale" data-src="img/main/01.jpg" alt="01"></picture>
 							</div>
 							<div class="section-prewiew__subscribe subscribe-prewiew">
 								<p class="subscribe-prewiew__text">
@@ -102,21 +109,20 @@
 			</section>
 
 			<section class="cleaning __container">
-				<div class="cleaning__top">
-					<h2 class="title cleaning__title">
+				<div class="section__header">
+					<h2 class="title section__title">
 						Профессиональная уборка
 					</h2>
-					<p class="sub-title cleaning__sub-title">
+					<p class="sub-title section__sub-title">
 						Мы обеспечиваем профессиональную чистоту
 						и порядок в любых пространствах и территориях
 					</p>
-
 				</div>
 				<div class="cleaning__body">
 					<!-- Оболочка слайдера --> <!-- Если нужна навигация (влево/вправо) -->
-					<div class="cleaning__nav-buttons">
-						<button id="prev" type="button" class="my-perw-button"></button>
-						<button id="next" type="button" class="my-next-button"></button>
+					<div class="swiper__nav-buttons">
+						<button id="prev" type="button" class="my-perw-button cleaning-button-perw"></button>
+						<button id="next" type="button" class="my-next-button cleaning-button-next"></button>
 					</div>
 					<div class="cleaning__slider swiper">
 
@@ -224,9 +230,649 @@
 				</div>
 			</section>
 
+			<section class="personal">
+				<div class="personal__container">
+					<div class="section__header">
+						<h2 class="title section__title">
+							Предоставление персонала
+						</h2>
+						<p class="sub-title section__sub-title">
+							Наша компания предоставляет линейный персонал
+							в Москве и Московской области. Мы помогаем бизнесу
+							без рисков быстро закрыть потребность в рабочих кадрах, минимизируя вовлеченность
+							административных, кадровых и
+							бухгалтерских ресурсов вашей компании
+						</p>
+					</div>
+					<div class="personal__items">
+						<div class="personal__item item-presonal">
+							<div class="item-presonal__image">
+								<picture><source data-srcset="img/personal/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/personal/01.jpg" alt="01"></picture>
+							</div>
+							<a href="#" class="item-presonal__link">
+								Кухонные работники
+							</a>
+						</div>
+
+						<div class="personal__item item-presonal">
+							<div class="item-presonal__image">
+								<picture><source data-srcset="img/personal/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/personal/02.jpg" alt="02"></picture>
+							</div>
+							<a href="#" class="item-presonal__link">
+								Кухонные работники
+							</a>
+						</div>
+
+						<div class="personal__item item-presonal">
+							<div class="item-presonal__image">
+								<picture><source data-srcset="img/personal/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/personal/03.jpg" alt="03"></picture>
+							</div>
+							<a href="#" class="item-presonal__link">
+								Кухонные работники
+							</a>
+						</div>
+
+						<div class="personal__item item-presonal">
+							<div class="item-presonal__image">
+								<picture><source data-srcset="img/personal/04.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/personal/04.jpg" alt="04"></picture>
+							</div>
+							<a href="#" class="item-presonal__link">
+								Кухонные работники
+							</a>
+						</div>
+
+						<div class="personal__item item-presonal">
+							<div class="item-presonal__image">
+								<picture><source data-srcset="img/personal/05.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/personal/05.jpg" alt="05"></picture>
+							</div>
+							<a href="#" class="item-presonal__link">
+								Кухонные работники
+							</a>
+						</div>
+
+
+
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<div class="services__container">
+					<div class="section__header services__header">
+						<h3 class="title section__title services__title">
+							Услуги
+						</h3>
+						<p class="sub-title section__sub-title services__sub-title">
+							Мы предоставляем полный комплекс клининговых услуг для корпоративных клиентов. Выполняем как
+							комплексную, так и
+							специализированную уборку, обеспечиваем чистоту внутри помещений и на прилегающих
+							территориях
+						</p>
+					</div>
+					<div data-tabs class="tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="button" class="tabs__title _tab-active">Клининг</button>
+							<button type="button" class="tabs__title">Аутстаффинг</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body">
+								<div class="services__items">
+									<div class="services__item item-service">
+										<div class="item-service__content">
+											<h4 class="item-service__title">
+												Ежедневная основная и поддерживающая уборка
+											</h4>
+											<div class="item-service__text">
+												Регулярная комплексная уборка офисов, ТЦ, производственных,
+												административных и других объектов
+											</div>
+										</div>
+										<button type="button" class="item-service__link btn">
+											<div class="btn__text">
+												Заказать услугу
+											</div>
+										</button>
+									</div>
+
+									<div class="services__item item-service">
+										<div class="item-service__content">
+											<h4 class="item-service__title">
+												Генеральная уборка
+											</h4>
+											<div class="item-service__text">
+												Глубокая очистка всех поверхностей, включая труднодоступные зоны,
+												вентиляционные решетки, светильники, стеклянные
+												перегородки и фасады
+											</div>
+										</div>
+										<button type="button" class="item-service__link btn">
+											<div class="btn__text">
+												Заказать услугу
+											</div>
+										</button>
+									</div>
+
+									<div class="services__item item-service">
+										<div class="item-service__content">
+											<h4 class="item-service__title">
+												Послестроительная уборка
+											</h4>
+											<div class="item-service__text">
+												Комплексная очистка помещений после ремонта или строительных работ
+											</div>
+										</div>
+										<button type="button" class="item-service__link btn">
+											<div class="btn__text">
+												Заказать услугу
+											</div>
+										</button>
+									</div>
+
+									<div class="services__item item-service">
+										<div class="item-service__content">
+											<h4 class="item-service__title">
+												Специализированные работы
+											</h4>
+											<div class="item-service__text">
+												Чистка ковров и мягкой мебели, уход за напольными покрытиями,
+												дезинфекция, чистка оборудования и технологических
+												помещений, работы на высоте
+											</div>
+										</div>
+										<button type="button" class="item-service__link btn">
+											<div class="btn__text">
+												Заказать услугу
+											</div>
+										</button>
+									</div>
+
+									<div class="services__item item-service">
+										<div class="item-service__content">
+											<h4 class="item-service__title">
+												Мойка фасадов и остекления
+											</h4>
+											<div class="item-service__text">
+												Высотная и ручная мойка фасадов зданий, витрин, окон, витражей,
+												остекления и прочего
+											</div>
+										</div>
+										<button type="button" class="item-service__link btn">
+											<div class="btn__text">
+												Заказать услугу
+											</div>
+										</button>
+									</div>
+
+									<div class="services__item item-service">
+										<div class="item-service__content">
+											<h4 class="item-service__title">
+												Предоставление грязезащитных покрытий
+											</h4>
+											<div class="item-service__text">
+												Аренда и замена грязезащитных ковров, предотвращающих распространение
+												уличной грязи в помещениях
+											</div>
+										</div>
+										<button type="button" class="item-service__link btn">
+											<div class="btn__text">
+												Заказать услугу
+											</div>
+										</button>
+									</div>
+
+									<div class="services__item item-service">
+										<div class="item-service__content">
+											<h4 class="item-service__title">
+												Механизированная и ручная уборка
+											</h4>
+											<div class="item-service__text">
+												Комплексная уборка прилегающих территорий: тротуаров, парковок,
+												подъездных путей, зон отдыха
+											</div>
+										</div>
+										<button type="button" class="item-service__link btn">
+											<div class="btn__text">
+												Заказать услугу
+											</div>
+										</button>
+									</div>
+
+								</div>
+							</div>
+							<div class="tabs__body">
+
+								<div class="services__item item-service">
+									<div class="item-service__content">
+										<h4 class="item-service__title">
+											Рабочие на склад
+										</h4>
+										<p class="item-service__text">
+											Грузчики, комплектовщики, операторы ТСД, фасовщики и упаковщики
+										</p>
+									</div>
+									<button type="button" class="item-service__link btn">
+										<div class="btn__text">
+											Заказать услугу
+										</div>
+									</button>
+								</div>
+
+								<div class="services__item item-service">
+									<div class="item-service__content">
+										<h4 class="item-service__title">
+											Рабочие на производство
+										</h4>
+										<p class="item-service__text">
+											Сотрудники от пищевых предприятий до производственных цехов
+										</p>
+									</div>
+									<button type="button" class="item-service__link btn">
+										<div class="btn__text">
+											Заказать услугу
+										</div>
+									</button>
+								</div>
+								<div class="services__item item-service">
+									<div class="item-service__content">
+										<h4 class="item-service__title">
+											Рабочие на кухню
+										</h4>
+										<p class="item-service__text">
+											Повара, кухонные работники, помощники, уборщики, мойщики и другие
+											специалисты в сфере общественного питания
+										</p>
+									</div>
+									<button type="button" class="item-service__link btn">
+										<div class="btn__text">
+											Заказать услугу
+										</div>
+									</button>
+								</div>
+
+								<div class="services__item item-service">
+									<div class="item-service__content">
+										<h4 class="item-service__title">
+											Рабочие на стройку
+										</h4>
+										<p class="item-service__text">
+											Разнорабочие, подсобные рабочие, бетонщики, маляры, плиточники и другие
+											рабочие
+										</p>
+									</div>
+									<button type="button" class="item-service__link btn">
+										<div class="btn__text">
+											Заказать услугу
+										</div>
+									</button>
+								</div>
+
+
+								<div class="services__item item-service">
+									<div class="item-service__content">
+										<h4 class="item-service__title">
+											Водители штабелеров
+										</h4>
+										<p class="item-service__text">
+											Операторы складской техники: водители штабелеров, ричтраков, погрузчиков,
+											электрокаров и др.
+										</p>
+									</div>
+									<button type="button" class="item-service__link btn">
+										<div class="btn__text">
+											Заказать услугу
+										</div>
+									</button>
+								</div>
+
+
+								<div class="services__item item-service">
+									<div class="item-service__content">
+										<h4 class="item-service__title">
+											Другие специальности
+										</h4>
+										<p class="item-service__text">
+											Персонал по индивидуальному запросу: кофе-леди, фасовщики, дворники,
+											уборщики, кассиры, горничные и др.
+										</p>
+									</div>
+									<button type="button" class="item-service__link btn">
+										<div class="btn__text">
+											Заказать услугу
+										</div>
+									</button>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="advantages">
+				<div class="advantages__container">
+					<div class="section__header">
+						<h3 class="title section__title">
+							Наши преимущества
+						</h3>
+					</div>
+					<div class="advantages__items">
+
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__header">
+								<span class="item-advantages__number">1/6</span>
+								<h4 class="item-advantages__title">Профессиональная команда</h4>
+							</div>
+
+							<p class="item-advantages__text">Весь руководящий состав имеет от 15 до 20 лет опыта в
+								профессиональной уборке и предоставлению персонала</p>
+						</div>
+
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__header">
+								<span class="item-advantages__number">2/6</span>
+								<h4 class="item-advantages__title">Квалификация</h4>
+							</div>
+
+							<p class="item-advantages__text">Обучаем уборщиков эффективному производственному процессу
+							</p>
+						</div>
+
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__header">
+								<span class="item-advantages__number">3/6</span>
+								<h4 class="item-advantages__title">Цифровизация</h4>
+							</div>
+
+							<p class="item-advantages__text">Имеем в активе цифровые платформы для отслеживая процесса и
+								качества оказания услуг</p>
+						</div>
+
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__header">
+								<span class="item-advantages__number">4/6</span>
+								<h4 class="item-advantages__title">Технология</h4>
+							</div>
+
+							<p class="item-advantages__text">Обладаем опытом внедрения передовых систем уборки таких как
+								безведерные системы, роботы уборщики</p>
+						</div>
+
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__header">
+								<span class="item-advantages__number">5/6</span>
+								<h4 class="item-advantages__title">Рекрутинг</h4>
+							</div>
+
+							<p class="item-advantages__text">Имеем отдел подбора персонала под любые запросы по
+								предоставлению сотрудников рабочих специальностей</p>
+						</div>
+
+						<div class="advantages__item item-advantages">
+							<div class="item-advantages__header">
+								<span class="item-advantages__number">6/6</span>
+								<h4 class="item-advantages__title">Безопасность</h4>
+							</div>
+
+							<p class="item-advantages__text">Используем профессиональное оборудование и безопасные, а
+								также биоразлагаемые химические средства</p>
+						</div>
+
+						<div class="advantages__item item-advantages item-advantages__title-blue">
+							Почему нас рекомендуют
+							и выбирают
+						</div>
+
+						<div class="advantages__item item-advantages item-advantages__image">
+							<picture><source srcset="img/advantages/01.webp" type="image/webp"><img src="img/advantages/01.jpg" alt="01"></picture>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="cooperation">
+				<div class="cooperation__container">
+					<div class="cooperation__items">
+						<div class="cooperation__line"></div>
+						<div class="cooperation__line-two"></div>
+						<div class="cooperation__dot"></div>
+						<div class="cooperation__item item-cooperation">
+							<div class="item-cooperation__number"></div>
+							<div class="item-cooperation__text">
+								<h5 class="item-cooperation__title">Первичный контакт</h5>
+								<p class="item-cooperation__text">
+									Вы связываетесь с нами любым удобным способом</p>
+							</div>
+						</div>
+
+						<div class="cooperation__item item-cooperation">
+							<div class="item-cooperation__number"></div>
+							<div class="item-cooperation__text">
+								<h5 class="item-cooperation__title">Согласование</h5>
+								<p class="item-cooperation__text">
+									Ответим на все ваши вопросы, согласует техническое
+									задание, пришлем коммерческое предложение</p>
+							</div>
+						</div>
+
+						<div class="cooperation__item item-cooperation">
+							<div class="item-cooperation__number"></div>
+							<div class="item-cooperation__text">
+								<h5 class="item-cooperation__title">Заключение договора</h5>
+								<p class="item-cooperation__text">
+									После согласования технического задания и стоимости, заключаем договор.
+									Для Вашего удобства все можно сделать по ЭДО
+								</p>
+							</div>
+						</div>
+
+						<div class="cooperation__item item-cooperation">
+							<div class="item-cooperation__number"></div>
+							<div class="item-cooperation__text">
+								<h5 class="item-cooperation__title">Оказание услуги</h5>
+								<p class="item-cooperation__text">
+									В назначенный день мы приступаем к выполнению работ в соответствии с
+									договорённостями. Предоставим персонал или выполним
+									услугу строго по согласованному заданию — чётко, профессионально и в срок
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="gallery">
+				<div class="gallegy__container">
+					<div class="section__header">
+						<h3 class="title section__title">
+							Галерея
+						</h3>
+					</div>
+					<div class="swiper__nav-buttons">
+						<button id="prev" type="button" class="my-perw-button gallegy-perw-button"></button>
+						<button id="next" type="button" class="my-next-button gallegy-next-button"></button>
+					</div>
+					<div class="gallery__slider swiper">
+						<div class="gallery__wrapper swiper-wrapper">
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image-ibg">
+									<picture><source data-srcset="img/gallery/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/01.jpg" alt=""></picture>
+								</div>
+								<div class="gallery__caption">Офис</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image-ibg">
+									<picture><source data-srcset="img/gallery/02.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/02.jpg" alt=""></picture>
+								</div>
+								<div class="gallery__caption">Склад</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image-ibg">
+									<picture><source data-srcset="img/gallery/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/03.jpg" alt=""></picture>
+								</div>
+								<div class="gallery__caption">Прилегающая территория</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image-ibg">
+									<picture><source data-srcset="img/gallery/01.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/01.jpg" alt=""></picture>
+								</div>
+								<div class="gallery__caption">Офис</div>
+							</div>
+							<div class="gallery__slide swiper-slide">
+								<div class="gallery__image-ibg">
+									<picture><source data-srcset="img/gallery/03.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  data-src="img/gallery/03.jpg" alt=""></picture>
+								</div>
+								<div class="gallery__caption">Склад</div>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contacts __container">
+				<div class="contacts__body">
+					<div class="contacts__title title">
+						Будем рады сотрудничеству!
+					</div>
+
+					<div class="contacts__sub-title">
+						<p>Оставьте заявку и мы свяжемся с вами</p>
+						<p>Или позвоните по номеру: <a href="tel:123">+7 (000) 00-00-00</a></p>
+					</div>
+
+					<form class="contacts__form form" action="">
+						<div class="form__grid">
+
+							<div class="form__item">
+								<label class="label" for="client-fio">ФИО *</label>
+								<input autocomplete="off" type="text" data-required required id="client-fio" name="client-phone" data-error="Ошибка. Попробуйте снова" placeholder="Иванов Иван Иванович" class="input">
+							</div>
+							<div class="form__item">
+								<label class="label" for="client-phone">Номер телефона *</label>
+								<input autocomplete="off" type="text" data-required required id="client-phone" name="client-phone" data-error="Ошибка. Попробуйте снова" placeholder="+7(xxx)xxx-xx-xx" class="input">
+							</div>
+
+							<div class="form__item">
+								<label class="label" for="client-email">Электронная почта *</label>
+								<input autocomplete="off" type="text" data-required required id="client-email" name="client-phone" data-error="Ошибка. Попробуйте снова" placeholder="pochta@mail.ru" class="input">
+							</div>
+							<div class="form__item">
+								<label class="label" for="client-link">Ссылка на процедуру</label>
+								<input autocomplete="off" type="text" data-required required id="client-link" name="client-phone" data-error="Ошибка. Попробуйте снова" placeholder="https://" class="input">
+							</div>
+						</div>
+						<div class="form__item">
+							<label class="label" for="client-text">Комментарий</label>
+							<textarea class="input" name="client-text" id="client-text" placeholder="Место для вашего комментария"></textarea>
+						</div>
+
+						<div class="form__item">
+
+							<label class="form__file">
+								<input id="formFile" accept=".docx, .xlsx, .png, .svg, .pdf, .jpg" autocomplete="off" type="file" name="image" class="file">
+
+								<div class="file__button">Прикрепить файл</div>
+								<div class="file__type">docx, xlsx, PNG, SVG, PDF, JPG (не более 25 mb)</div>
+								<div class="file__del">del файл</div>
+							</label>
+							<div id="formPreview" class="file__preview"></div>
+
+						</div>
+
+						<div class="section-prewiew__buttons">
+							<button href="#" class="btn _arr">
+								<div class="btn__text">Заказать уборку</div>
+								<div class="btn__icon"></div>
+							</button>
+						</div>
+
+						<div class="checkbox">
+							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="c_1" class="checkbox__label"><span class="checkbox__text">Нажимая кнопку
+									«Отправить»,
+									я даю согласие на обработку своих персональных данных и соглашаюсь с условиями
+									использования
+									и Политикой конфиденциальности</span></label>
+						</div>
+					</form>
+				</div>
+			</section>
+
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
+				<div class="footer__body">
+					<a href="" class="footer__logo"><img data-src="img/logo.svg" alt="logo"></a>
+					<div class="footer__nav">
+						<div class="footer__column">
+							<div class="footer__title">Меню</div>
+							<div class="footer__items">
+								<div class="footer__item">
+									<a href="#" class="footer__link">
+										Главная
+									</a>
+								</div>
+
+								<div class="footer__item">
+									<a href="#" class="footer__link">
+										Услуги
+									</a>
+								</div>
+								<div class="footer__item">
+									<a href="#" class="footer__link">
+										Аутстаффинг
+									</a>
+								</div>
+								<div class="footer__item">
+									<a href="#" class="footer__link">
+										О компании
+									</a>
+									<div class="footer__item"></div>
+									<a href="#" class="footer__link">
+										Контакты
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer__column">
+							<div class="footer__title">Контакты</div>
+							<div class="footer__items">
+								<div class="footer__item">
+									129344, г.Москва, ул.Верхоянская, дом №18, корпус 2
+								</div>
+
+								<div class="footer__item">
+									<a href="#" class="footer__link">
+										+7 (499) 350-75-30
+									</a>
+								</div>
+								<div class="footer__item">
+									<a href="#" class="footer__link">
+										info@t-wave.ru
+									</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="footer__column">
+							<div class="footer__title">Правовая информация</div>
+							<div class="footer__items">
+								<div class="footer__item">
+									<a href="#" class="footer__link">
+										Политика конфиденциальности
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__copy">
+					© ООО "ТИ-ВЭЙВ" 2025
+				</div>
 			</div>
 		</footer>
 	</div>
@@ -236,17 +882,17 @@
 				<button data-close type="button" class="popup__close _icon-close"></button>
 				<div class="popup__text">
 					<form class="popup-callback-form" action="#">
-						<div class="body-input">
+						<div class="form__item">
 							<label class="label" for="name-client">ФИО *</label>
 							<input autocomplete="off" type="text" data-required required name="name-client" data-error="Ошибка. Попробуйте снова" id="name-client" placeholder="Иванов Иван Иванович" class="input">
 						</div>
 
-						<div class="body-input">
+						<div class="form__item">
 							<label class="label" for="client-phone">Номер телефона *</label>
 							<input autocomplete="off" type="text" data-required required id="client-phone" name="client-phone" data-error="Ошибка. Попробуйте снова" placeholder="+7(xxx)xxx-xx-xx" class="input">
 						</div>
 
-						<div class="body-input">
+						<div class="form__item">
 							<button type="submit" class="button _ar"><span>Отправить</span></button>
 						</div>
 
@@ -263,7 +909,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250714223807"></script>
+	<script src="js/app.min.js?_v=20250716210343"></script>
 </body>
 
 </html>
