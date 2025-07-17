@@ -183,6 +183,10 @@ h6 {
   min-width: 0;
 }
 
+.wrapper .page > * {
+  margin-bottom: 5.625rem;
+}
+
 /*
 (i) Стили будут применяться ко 
 всем классам содержащим *__container
@@ -695,10 +699,6 @@ h4 {
   font-size: 2rem;
 }
 
-section:not(:last-child) {
-  margin-bottom: 5.625rem;
-}
-
 .section__header {
   display: -ms-grid;
   display: grid;
@@ -899,22 +899,31 @@ section:not(:last-child) {
   background-color: #dedede;
 }
 
-.footer__body {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 8fr;
-  grid-template-columns: 1fr 8fr;
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2.1875rem;
 }
 
 .footer__nav {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5625rem;
+  -ms-grid-columns: 1fr 2fr 2fr 2fr;
+  grid-template-columns: 1fr 2fr 2fr 2fr;
 }
 
 .footer__title {
   font-weight: 500;
+}
+
+.footer__title:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
 
 .footer__items {
@@ -926,6 +935,9 @@ section:not(:last-child) {
 }
 
 .footer__copy {
+  font-size: 1rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   font-weight: 500;
 }
 
@@ -1094,6 +1106,10 @@ section:not(:last-child) {
   border-radius: 1.875rem;
   -webkit-box-shadow: -3px -3px 13px 0 rgba(160, 191, 218, 0.25), 3px 3px 13px 0 rgba(160, 191, 218, 0.25);
           box-shadow: -3px -3px 13px 0 rgba(160, 191, 218, 0.25), 3px 3px 13px 0 rgba(160, 191, 218, 0.25);
+  -webkit-transition: -webkit-box-shadow 0.5s ease;
+  transition: -webkit-box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, -webkit-box-shadow 0.5s ease;
 }
 
 .item-presonal__image {
@@ -1572,10 +1588,6 @@ section:not(:last-child) {
 
 .contacts__sub-title:not(:last-child) {
   margin-bottom: 1.875rem;
-}
-
-.contacts__form .checkbox {
-  width: 62%;
 }
 
 .swiper-slide-prev {
@@ -2416,6 +2428,12 @@ button.swiper-pagination-bullet {
   }
 }
 
+@media (min-width: 61.99875em) {
+  .contacts__form .checkbox {
+    width: 62%;
+  }
+}
+
 @media (max-width: 84.375em) {
   .menu__link {
     font-size: 0.875rem;
@@ -2507,6 +2525,22 @@ button.swiper-pagination-bullet {
   .menu__actions {
     -ms-flex-item-align: end;
         align-self: flex-end;
+  }
+
+  .footer__nav {
+    -ms-grid-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+
+  .footer__column:nth-child(4) {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    -ms-grid-column-span: 2;
+    grid-column-end: 4;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-row-span: 0;
+    grid-row-end: 2;
   }
 
   .prewiew__body {
@@ -2681,6 +2715,21 @@ button.swiper-pagination-bullet {
             transform: rotate(45deg);
   }
 
+  .footer__nav {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 2.8125rem;
+  }
+
+  .footer__column:nth-child(4) {
+    -ms-grid-column: auto;
+        grid-column-start: auto;
+    grid-column-end: auto;
+    -ms-grid-row: auto;
+        grid-row-start: auto;
+    grid-row-end: auto;
+  }
+
   .prewiew__body {
     min-height: 34.375rem;
   }
@@ -2753,6 +2802,27 @@ button.swiper-pagination-bullet {
   }
 
   .item-advantages__title {
+    font-size: 1rem;
+  }
+
+  .form__grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__body {
+    padding: 1.875rem 1.25rem;
+  }
+
+  .contacts__title {
+    font-size: 1.875rem;
+  }
+
+  .contacts__title:not(:last-child) {
+    margin-bottom: 1.5625rem;
+  }
+
+  .contacts__sub-title {
     font-size: 1rem;
   }
 }
@@ -2906,6 +2976,11 @@ button.swiper-pagination-bullet {
 
   .cleaning__slide:hover {
     background-color: #b1e1fe;
+  }
+
+  .item-presonal:hover {
+    -webkit-box-shadow: -3px -3px 13px 0 rgba(160, 191, 218, 0.5), 3px 3px 13px 0 rgba(160, 191, 218, 0.5);
+            box-shadow: -3px -3px 13px 0 rgba(160, 191, 218, 0.5), 3px 3px 13px 0 rgba(160, 191, 218, 0.5);
   }
 
   .item-presonal:hover .item-presonal__image img {

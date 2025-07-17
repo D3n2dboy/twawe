@@ -7089,6 +7089,24 @@
                 },
                 spaceBetween: 20,
                 loop: false,
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    468: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    968: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    }
+                },
                 on: {}
             });
         }
