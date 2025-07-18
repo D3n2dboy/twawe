@@ -16,6 +16,10 @@
 	transition: all 0.3s ease;
 	white-space: nowrap;
 
+	&:not(:last-child) {
+		margin-bottom: rem(15);
+	}
+
 	&::before {
 		position: absolute;
 		top: 50%;
@@ -25,19 +29,6 @@
 		font-size: rem(35);
 		transform: translateY(-50%);
 		transition: all 0.3s ease;
-	}
-
-	&._ar {
-		min-height: rem(44);
-		& span {
-			transition: transform 0.3s ease;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: #fff;
-				border-radius: rem(30) 0 0 rem(30);
-			}
-		}
 	}
 
 	@media (any-hover: hover) {
@@ -66,6 +57,16 @@
 		width: 100%;
 	}
 	&._ar {
+		& span {
+			transition: transform 0.3s ease;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #fff;
+				border-radius: rem(30) 0 0 rem(30);
+			}
+		}
+
 		&::before {
 			@extend %ic;
 			content: "\e900";
@@ -75,8 +76,8 @@
 			content: "";
 			position: absolute;
 			left: calc(100% + 5px);
-			width: rem(48);
-			min-height: rem(47);
+			width: rem(52);
+			height: rem(52);
 			top: -2px;
 			border-radius: 50%;
 			border: 2px solid $colorYellow;
@@ -109,6 +110,101 @@
 
 		&:active {
 			background-color: $colorBlueDark;
+		}
+	}
+}
+
+.btn {
+	display: inline-flex;
+	gap: 2px;
+	height: rem(50);
+	align-items: center;
+	font-weight: 600;
+	font-size: rem(16);
+	white-space: nowrap;
+
+	&__text {
+		align-content: center;
+		padding: 0 rem(22);
+		height: 100%;
+		border-radius: $borderRadius;
+		border: 2px solid $colorYellow;
+		background-color: $colorYellow;
+		transition: all 0.3s ease;
+
+		._blue & {
+			background-color: $colorBlue;
+			border-color: $colorBlue;
+
+			@media (any-hover: hover) {
+				&:active {
+					background-color: $colorBlueDark;
+					border-color: $colorBlueDark;
+				}
+
+				&:disabled {
+					background-color: $colorSilver;
+					border-color: $colorSilver;
+				}
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #fff;
+			}
+		}
+	}
+
+	&__icon {
+		position: relative;
+		width: 52px;
+		height: 100%;
+		border-radius: $borderRadius;
+		border: 2px solid $colorYellow;
+		background-color: $colorYellow;
+		transition: all 0.3s ease;
+
+		&::before {
+			@extend %ic;
+			content: "\e900";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: rem(35);
+			transition: left 0.3s ease;
+		}
+	}
+
+	&._arr {
+		@media (any-hover: hover) {
+			&:hover .btn__text {
+				border-radius: rem(30) 0 0 rem(30);
+				background-color: #fff;
+				border-color: $colorYellow white $colorYellow $colorYellow;
+			}
+
+			&:hover .btn__icon {
+				border-radius: 0 rem(30) rem(30) 0;
+				border-left-style: none;
+				background-color: #fff;
+				transform: translateX(-10px);
+			}
+			&:hover .btn__icon::before {
+				left: 45%;
+			}
+			&:active .btn__text,
+			&:active .btn__icon {
+				background-color: $colorYellowDark;
+				border-color: $colorYellowDark;
+			}
+
+			&:disabled .btn__text,
+			&:disabled .btn__icon {
+				background-color: $colorSilver;
+				border-color: $colorSilver;
+			}
 		}
 	}
 }

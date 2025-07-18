@@ -81,6 +81,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	line-height: 1.2;
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
@@ -88,6 +89,10 @@ body {
 	// Фикс для слайдеров
 	> * {
 		min-width: 0;
+	}
+
+	& .page > * {
+		margin-bottom: rem(90);
 	}
 }
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
@@ -150,3 +155,15 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "services";
+@import "about";
+@import "contacts";
+
+.swiper-slide-prev {
+	visibility: visible !important;
+	display: block !important;
+	opacity: 1 !important;
+}
+._fade-active {
+	opacity: 0;
+}

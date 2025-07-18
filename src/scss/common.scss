@@ -20,9 +20,91 @@ h4 {
 	font-size: rem(32);
 }
 
+.content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+	h1 {
+		font-size: rem(32);
+	}
+	h2 {
+		font-weight: 700;
+		font-size: rem(24);
+	}
+	h3 {
+		font-weight: 600;
+		font-size: rem(24);
+	}
+	h4 {
+		font-size: rem(24);
+	}
+	h5 {
+		font-size: rem(20);
+		font-weight: 600;
+	}
+	h6 {
+		font-size: rem(20);
+		font-weight: 500;
+	}
+}
+
+.page {
+	// .page__container
+	&__container {
+		margin-bottom: 10px;
+	}
+	// .page__breadcrumbs
+
+	&__breadcrumbs {
+		font-size: rem(16);
+	}
+}
+
+.breadcrumb_last {
+	color: $colorSilverDark;
+}
+
 section {
-	&:not(:last-child) {
-		margin-bottom: rem(90);
+}
+
+.section {
+	// .section__hrader
+	&__header {
+		display: grid;
+		grid-template-columns: 4fr 3fr;
+		column-gap: rem(35);
+
+		@media (max-width: $tablet) {
+			row-gap: rem(25);
+			grid-template-columns: 1fr;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+		}
+	}
+
+	// .section__title
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+
+	// .section__sub-title
+
+	&__sub-title {
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
 	}
 }
 
@@ -48,6 +130,21 @@ section {
 
 .swiper-slide-prev {
 	opacity: 0;
+}
+
+.swiper {
+	// .swiper__nav-buttons
+	&__nav-buttons {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		gap: rem(20);
+		justify-content: flex-end;
+
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
+	}
 }
 
 .my-perw-button,
@@ -87,3 +184,5 @@ section {
 		content: "\e900";
 	}
 }
+
+/* Ввсопмогательные классы */

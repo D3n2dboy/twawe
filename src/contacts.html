@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+
+			<section class="prewiew">
+				<div class="prewiew__container">
+					<div class="prewiew__breadcrumbs">
+						Главная. <span class="breadcrumb_last">Контакты</span>
+					</div>
+					<div class="prewiew__body prewiew__body_full">
+						<div class="prewiew__section section-prewiew">
+							<div class="section-prewiew__image-ibg">
+								<img data-src="@img/main/001.jpg" alt="01">
+							</div>
+							<h1 class="section-prewiew__title">
+								Контакты
+							</h1>
+
+							<p class="section-prewiew__sub-title">
+								Берём на себя рутину, чтобы вы сосредоточились на росте
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="content">
+				<div class="content__container">
+					<div class="content__body">
+
+						<h3>
+							Адрес
+						</h3>
+						<p>
+							129344, г.Москва, ул.Верхоянская, дом №18, корпус 2
+						</p>
+						<br>
+						<h3>
+							Телефон
+						</h3>
+
+						<p>
+							<a href="#">+7 (499) 350-75-30</a>
+						</p>
+						<br>
+
+						<h3>
+							Электронная почта
+						</h3>
+
+						<p>
+							<a href="#">info@t-wave.ru</a>
+						</p>
+					</div>
+
+					<div class="content__sidebar">
+						<div class="socials">
+							<div class="socials__title">
+								Мы в соц. сетях
+							</div>
+
+							<ul class="socials__items">
+								<li class="socials__item">
+									<a href="#" class="socials__link _icon-telegram"></a>
+								</li>
+								<li class="socials__item">
+									<a href="#" class="socials__link _icon-whatsapp"></a>
+								</li>
+							</ul>
+
+							<div class="socials__title">
+								Если вы клиент – свяжитесь с нами!
+							</div>
+							<div class="section-prewiew__buttons">
+								<a href="#" class="btn _arr">
+									<div class="btn__text">Связаться с нами</div>
+									<div class="btn__icon"></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

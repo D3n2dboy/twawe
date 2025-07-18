@@ -1,3 +1,133 @@
 //====================================================================================================
+.footer {
+	padding: rem(40) 0;
+	background-color: $colorSilver;
+	// .footer__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(35);
+	}
+
+	// .footer__logo
+
+	&__logo {
+	}
+
+	// .footer__nav
+
+	&__nav {
+		display: grid;
+		gap: rem(25);
+		grid-template-columns: 1fr 2fr 2fr 2fr;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 2fr 2fr;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr 1fr;
+			gap: rem(35);
+		}
+
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: 1fr;
+		}
+
+		& .footer__logo {
+			@media (max-width: $mobile) {
+				&:nth-child(1) {
+					grid-column: span 2;
+					//background-color: rgb(25, 168, 80);
+				}
+			}
+
+			@media (max-width: $mobileSmall) {
+				&:nth-child(1) {
+					//background-color: rgb(251, 255, 26);
+					grid-column: auto / auto;
+					grid-row: auto / auto;
+				}
+			}
+		}
+	}
+
+	// .footer__column
+
+	&__column {
+		@media (max-width: $tablet) {
+			&:nth-child(4) {
+				grid-column: 2 / span 2;
+				grid-row: 3 / 4;
+				//background-color: orange;
+			}
+		}
+		@media (max-width: $mobile) {
+			&:nth-child(4) {
+				grid-column: span 2;
+				//background-color: rgb(87, 161, 149);
+			}
+		}
+
+		@media (max-width: $mobileSmall) {
+			&:nth-child(2) {
+				//background-color: plum;
+				grid-column: auto / auto;
+				grid-row: auto / auto;
+			}
+			&:nth-child(3) {
+				//background-color: rgb(19, 55, 170);
+				grid-column: auto / auto;
+				grid-row: auto / auto;
+			}
+			&:nth-child(4) {
+				//background-color: rgb(223, 37, 83);
+				grid-column: auto / auto;
+				grid-row: auto / auto;
+			}
+		}
+	}
+
+	// .footer__title
+
+	&__title {
+		font-weight: 500;
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
+	}
+
+	// .footer__items
+
+	&__items {
+		font-size: rem(16);
+	}
+
+	// .footer__item
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(15);
+		}
+	}
+
+	// .footer__link
+
+	&__link {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// .footer__copy
+
+	&__copy {
+		font-size: rem(16);
+		align-self: flex-end;
+		font-weight: 500;
+	}
+}
 
 //====================================================================================================

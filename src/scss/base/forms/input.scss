@@ -9,11 +9,20 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
-
-.body-input {
+.form__item {
+	position: relative;
 	width: 100%;
+
 	&:not(:last-child) {
 		margin-bottom: rem(20);
+	}
+
+	& .form__error {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		font-size: rem(13);
+		color: red;
 	}
 }
 
@@ -24,7 +33,7 @@ textarea {
 	border: 0.5px solid #eee;
 	border-bottom: 0.5px solid $colorSilver;
 	color: $colorSilverDark;
-	padding: rem(10) rem(25);
+	padding: rem(15) rem(25);
 	font-size: rem(16);
 	transition: all 0.3s ease;
 	outline: none;
@@ -47,15 +56,23 @@ textarea {
 		margin-bottom: rem(20);
 	}
 }
+
 textarea.input {
 	resize: none;
-	padding: 0px 0px;
+	height: 100px;
 }
 
 .label {
 	display: inline-block;
 	font-size: rem(14);
 	color: #000;
+	transition: color 0.3s ease;
+
+	._form-error & {
+		border-color: #e32d2d;
+		color: #e32d2d;
+	}
+
 	&:not(:last-child) {
 		margin-bottom: rem(8);
 	}

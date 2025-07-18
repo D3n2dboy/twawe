@@ -1,0 +1,179 @@
+.types {
+	// .types__container
+
+	&__container {
+	}
+
+	// .types__header
+
+	&__header {
+	}
+
+	// .types__body
+
+	&__body {
+		display: grid;
+		grid-template-columns: 5fr 7fr;
+		gap: rem(50);
+	}
+
+	// .types__text
+
+	&__text {
+		color: $colorSilverDark;
+	}
+
+	// .types__items
+
+	&__items {
+	}
+
+	// .types__item
+
+	&__item {
+	}
+}
+.section {
+	// .section__header
+
+	&__header {
+	}
+
+	// .section__title
+
+	&__title {
+	}
+}
+
+.item-types {
+	display: flex;
+	padding: rem(20) 0;
+	column-gap: rem(20);
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $colorSilverDark;
+	}
+
+	&::before {
+		@extend %ic;
+		content: "\e904";
+		padding: rem(25px);
+		background-color: $colorYellow;
+		align-self: flex-start;
+		font-size: rem(48);
+		border-radius: 50%;
+		color: #fff;
+	}
+
+	// .item-types__content
+
+	&__content {
+	}
+
+	// .item-types__title
+
+	&__title {
+		font-weight: 600;
+		&:not(:last-child) {
+			margin-bottom: rem(20);
+		}
+	}
+
+	// .item-types__text
+
+	&__text {
+		font-size: rem(16);
+	}
+}
+
+/* -------------------------------------------------- */
+
+.recommendations {
+	// .recommendations__container
+
+	&__container {
+	}
+
+	// .recommendations__slider
+
+	&__slider {
+	}
+
+	// .recommendations__image-ibg
+
+	&__image-ibg {
+		padding-bottom: 100%;
+		border-radius: $borderRadius;
+		overflow: hidden;
+	}
+}
+.swiper {
+	// .swiper__nav-buttons
+
+	&__nav-buttons {
+	}
+}
+
+/* -------------------------------------------------- */
+
+.staff {
+	// .staff__container
+
+	&__container {
+	}
+
+	// .staff__items
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: rem(50);
+		padding: rem(30);
+		border-radius: $borderRadius;
+		background-color: #ebebeb;
+
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// .staff__item
+
+	&__item {
+		align-self: center;
+	}
+}
+.item-staff {
+	// .item-staff__title
+
+	&__title {
+		font-weight: 600;
+		font-size: rem(24);
+		&:not(:last-child) {
+			margin-bottom: rem(25);
+		}
+	}
+
+	// .item-staff__sub-title
+
+	&__sub-title {
+		font-size: rem(16);
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+		}
+	}
+
+	// .item-staff__image-ibg
+
+	&__image-ibg {
+		border-radius: $borderRadius;
+		overflow: hidden;
+		padding-bottom: 38%;
+	}
+}
+.section-prewiew {
+	// .section-prewiew__buttons
+
+	&__buttons {
+	}
+}

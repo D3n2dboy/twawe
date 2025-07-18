@@ -2,20 +2,34 @@
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
+		column-gap: rem(15);
+
+		&:not(:last-child) {
+			margin-bottom: rem(30);
+		}
 	}
 	// .tabs__title
 	&__title {
-		border: 1px solid #eee;
-		padding: rem(10) rem(15);
-		border-radius: rem(5);
+		border: 1px solid #000;
+		padding: rem(10) rem(25);
+		border-radius: $borderRadius;
+		transition: background 0.3s ease;
+		font-weight: 500;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $colorBlueDark;
+			}
+		}
+
 		&._tab-active {
-			border: 1px solid #000;
+			border: 1px solid $colorBlue;
+			background-color: $colorBlue;
+			font-weight: 600;
 		}
 	}
 	// .tabs__content
 	&__content {
-		border: 1px solid #eee;
-		padding: rem(10) rem(15);
 	}
 	// .tabs__body
 	&__body {
