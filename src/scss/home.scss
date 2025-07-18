@@ -43,10 +43,15 @@
 
 		&_full {
 			grid-template-columns: 1fr;
-			min-height: 330px;
+			min-height: rem(330);
+
+			@media (min-width: $mobile) {
+				grid-template-columns: 1fr;
+				min-height: rem(330);
+			}
 			& .section-prewiew {
 				justify-self: stretch;
-				min-height: 330px;
+				min-height: rem(330);
 			}
 		}
 	}
