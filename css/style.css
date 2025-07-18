@@ -1026,13 +1026,13 @@ h4 {
 .prewiew__body_full {
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  min-height: 330px;
+  min-height: 20.625rem;
 }
 
 .prewiew__body_full .section-prewiew {
   -ms-grid-column-align: stretch;
       justify-self: stretch;
-  min-height: 330px;
+  min-height: 20.625rem;
 }
 
 .prewiew__section {
@@ -2783,6 +2783,12 @@ button.swiper-pagination-bullet {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .prewiew__body_full {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    min-height: 20.625rem;
   }
 
   .item-service__link {
