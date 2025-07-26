@@ -36,7 +36,7 @@
 
 		@media (max-width: $mobile) {
 			//padding: rem(20);
-			min-height: rem(550);
+			min-height: auto;
 		}
 
 		// .prewiew__body_full
@@ -69,9 +69,10 @@
 	}
 }
 .section-prewiew {
-	padding: rem(120) rem(65) rem(65) rem(65);
+	background-color: $colorBlue;
+	padding: rem(65);
 
-	justify-self: start;
+	align-content: center;
 
 	@media (max-width: $pc) {
 		padding: rem(40);
@@ -450,7 +451,9 @@
 	// .services__sub-title
 
 	&__sub-title {
-		max-width: 65%;
+		@media (min-width: $tablet) {
+			max-width: 65%;
+		}
 	}
 
 	// .services__items
@@ -702,7 +705,6 @@
 	// .cooperation__container
 
 	&__container {
-		position: relative;
 	}
 
 	// .cooperation__line
@@ -710,7 +712,7 @@
 	&__line {
 		position: absolute;
 		top: 0;
-		@include adaptiveValue("left", 201, 90);
+		@include adaptiveValue("left", 181, 75);
 		width: 2px;
 		height: 100%;
 		background-color: $colorSilver;
@@ -730,7 +732,7 @@
 	&__line-two {
 		position: absolute;
 		top: 0;
-		@include adaptiveValue("left", 201, 90);
+		@include adaptiveValue("left", 181, 75);
 		width: 2px;
 		height: 0;
 		background-color: $colorBlueAccent;
@@ -739,7 +741,7 @@
 	&__dot {
 		position: absolute;
 		top: 0;
-		@include adaptiveValue("left", 200, 90);
+		@include adaptiveValue("left", 180, 75);
 		z-index: 10;
 
 		&::before {
@@ -769,6 +771,7 @@
 	// .cooperation__items
 
 	&__items {
+		position: relative;
 	}
 
 	// .cooperation__item
@@ -791,7 +794,7 @@
 		@include adaptiveValue("font-size", 96, 45);
 		line-height: 125%;
 		letter-spacing: -0.03em;
-		@include adaptiveValue("min-width", 120, 80);
+		@include adaptiveValue("min-width", 140, 80);
 
 		transition: opacity 0.8s ease;
 		color: $colorBlueLight;
