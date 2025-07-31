@@ -7501,8 +7501,7 @@
         da.init();
         document.addEventListener("DOMContentLoaded", (function() {
             const items = document.querySelectorAll(".item-cooperation__number");
-            items.forEach(((el, index) => {
-                console.log(el);
+            if (items) items.forEach(((el, index) => {
                 el.textContent = String(index + 1).padStart(2, "0");
             }));
         }));
@@ -7539,7 +7538,6 @@
                 if (block.classList.contains("_stop-anim")) return; else if (rect.top < startTrigger && rect.bottom > 0) {
                     const progress = (startTrigger - rect.top) / blockHeight;
                     const clampedProgress = Math.max(0, Math.min(progress, 1));
-                    console.log("blockHeight", blockHeight);
                     dot.style.top = `${clampedProgress * (blockHeight - 10)}px`;
                     lineTwo.style.height = `${clampedProgress * blockHeight}px`;
                     if (clampedProgress * (blockHeight - 10) == blockHeight - 10) block.classList.add("_stop-anim");

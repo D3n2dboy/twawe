@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250726135235">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250731200612">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -544,12 +544,12 @@
 					<form class="popup-callback-form" action="#">
 						<div class="form__item">
 							<label class="label" for="name-client">ФИО *</label>
-							<input autocomplete="off" type="text" data-required required name="name-client" data-error="Ошибка. Попробуйте снова" id="name-client" placeholder="Иванов Иван Иванович" class="input">
+							<input autocomplete="off" type="text" data-validate required name="name-client" data-error="Ошибка. Попробуйте снова" id="name-client" placeholder="Иванов Иван Иванович" class="input">
 						</div>
 
 						<div class="form__item">
 							<label class="label" for="client-phone">Номер телефона *</label>
-							<input autocomplete="off" type="text" data-required required id="client-phone" name="client-phone" data-error="Ошибка. Попробуйте снова" placeholder="+7(xxx)xxx-xx-xx" class="input">
+							<input autocomplete="off" type="text" data-validate required id="client-phone" name="client-phone" data-error="Ошибка. Попробуйте снова" placeholder="+7(xxx)xxx-xx-xx" class="input">
 						</div>
 
 						<div class="form__item">
@@ -560,21 +560,22 @@
 								</button>
 							</div>
 						</div>
-
-						<div class="checkbox">
-							<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
-							<label for="c_1" class="checkbox__label"><span class="checkbox__text">Нажимая кнопку
-									«Отправить»,
-									я даю согласие на обработку своих персональных данных и соглашаюсь с условиями
-									использования
-									и Политикой конфиденциальности</span></label>
+						<div class="form__item">
+							<div class="checkbox">
+								<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Нажимая кнопку
+										«Отправить»,
+										я даю согласие на обработку своих персональных данных и соглашаюсь с условиями
+										использования
+										и Политикой конфиденциальности</span></label>
+							</div>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250726135235"></script>
+	<script src="js/app.min.js?_v=20250731200612"></script>
 </body>
 
 </html>
