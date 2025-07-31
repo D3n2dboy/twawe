@@ -4,10 +4,19 @@
 	// .header__container
 
 	&__container {
+		position: relative;
 		display: flex;
-
 		min-height: rem(92);
 		justify-content: space-between;
+
+		&::before {
+			content: "";
+			bottom: 0;
+			position: absolute;
+			width: calc(100% - 30px);
+			height: 1px;
+			background-color: $colorSilver;
+		}
 
 		@media (min-width: $mobile) {
 			align-items: center;
@@ -17,6 +26,7 @@
 			position: relative;
 			min-height: rem(70);
 			z-index: 99;
+			padding-bottom: rem(10);
 			&::before {
 				position: absolute;
 				top: 0;

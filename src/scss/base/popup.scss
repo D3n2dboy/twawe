@@ -63,6 +63,14 @@ body::after {
 	.lock & {
 		visibility: visible;
 	}
+
+	@media (max-width: $tablet) {
+		max-width: rem(650);
+	}
+
+	@media (max-width: $mobile) {
+		max-width: rem(340);
+	}
 }
 
 .popup__close {
@@ -70,4 +78,12 @@ body::after {
 	top: rem(20);
 	right: rem(20);
 	color: $colorSilverDark;
+
+	transition: color 0.3s ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $colorBlueDark;
+		}
+	}
 }

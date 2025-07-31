@@ -64,7 +64,7 @@
 		border-radius: $borderRadius;
 
 		@media (max-width: $mobile) {
-			display: none;
+			//display: none;
 		}
 	}
 }
@@ -175,6 +175,7 @@
 	column-gap: rem(30);
 	align-items: center;
 	flex-wrap: wrap;
+	min-height: rem(50);
 
 	@media (max-width: $tablet) {
 		font-size: rem(14);
@@ -207,7 +208,6 @@
 
 	&__link {
 		display: inline-block;
-		padding: rem(5);
 		img {
 			transition: transform 0.3s ease;
 		}
@@ -561,11 +561,16 @@
 }
 
 .item-advantages {
-	min-height: 320px;
+	height: rem(320);
 	border-radius: $borderRadius;
 	overflow: hidden;
+
+	@media (max-width: $tablet) {
+		height: rem(260);
+	}
+
 	@media (max-width: $mobile) {
-		min-height: rem(160);
+		height: rem(200);
 	}
 
 	// .item-advantages__content
@@ -594,6 +599,19 @@
 	&:nth-child(6) {
 		background-color: $colorBlueLight;
 	}
+
+	// .item-advantages__image-ibg
+
+	&__image-ibg {
+		padding-bottom: (80%);
+		@media (max-width: $mobile) {
+			padding-bottom: 60%;
+		}
+		@media (max-width: $mobileSmall) {
+			padding-bottom: 50%;
+		}
+	}
+
 	// .item-advantages__title-blue
 
 	&__title-blue {
@@ -626,6 +644,14 @@
 		}
 	}
 
+	// .item-advantages__image-content
+
+	&__image-content {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
 	// .item-advantages__image
 
 	&__image {
@@ -640,9 +666,10 @@
 			grid-row-end: 5;
 		}
 
-		& img {
-			max-width: 100%;
-		}
+		// & img {
+		// 	//max-width: 100%;
+		// 	object-fit: contain;
+		// }
 	}
 
 	// .item-advantages__header
@@ -843,6 +870,7 @@
 
 	&__slide {
 		text-align: center;
+		//transform: scale(0.5);
 	}
 
 	// .gallery__image-ibg
@@ -864,6 +892,19 @@
 		line-height: 1.1;
 	}
 }
+
+// .swiper-slide-active {
+// 	transform: scale(0.5);
+// }
+
+// .swiper-slide-next {
+// 	transform: scale(1);
+// }
+
+// .swiper-slide {
+// 	transition: all 0.3s ease;
+// }
+
 .gallegy {
 	// .gallegy__container
 
@@ -981,6 +1022,13 @@
 		p {
 			&:not(:last-child) {
 				margin-bottom: rem(15);
+			}
+
+			& a {
+				@media (max-width: $mobile) {
+					display: flex;
+					margin: 15px 0 0 0;
+				}
 			}
 		}
 		&:not(:last-child) {

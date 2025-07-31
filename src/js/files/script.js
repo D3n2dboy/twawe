@@ -3,13 +3,25 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
+// import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.js";
+// import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+// Fancybox.bind("[data-fancybox]", {});
+
+// Fancybox.bind('[data-fancybox="gallery"]', {
+//     // Your custom options for a specific gallery
+// });
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(".item-cooperation__number");
-    items.forEach((el, index) => {
-        console.log(el);
-        el.textContent = String(index + 1).padStart(2, '0');
-    });
+
+    if (items) {
+        items.forEach((el, index) => {
+            //console.log(el);
+            el.textContent = String(index + 1).padStart(2, '0');
+        });
+    }
 });
 
 /* 
@@ -87,7 +99,7 @@ function updateDotPosition() {
                 // Сколько % блока уже в половине экрана
                 const progress = (startTrigger - rect.top) / (blockHeight);
                 const clampedProgress = Math.max(0, Math.min(progress, 1));
-                console.log('blockHeight', blockHeight);
+                //console.log('blockHeight', blockHeight);
 
                 // Смещение точки по высоте
                 dot.style.top = `${clampedProgress * (blockHeight - 10)}px`; // 10 — высота точки

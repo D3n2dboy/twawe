@@ -18,11 +18,16 @@ textarea {
 	}
 
 	& .form__error {
-		position: absolute;
-		bottom: 0;
-		left: 0;
+		// position: absolute;
+		// bottom: 0;
+		// left: 0;
 		font-size: rem(13);
-		color: red;
+		color: #e32d2d;
+		margin-left: rem(25);
+	}
+
+	& .checkbox._form-focus {
+		background-color: #e32d2d50;
 	}
 }
 
@@ -37,12 +42,17 @@ textarea {
 	font-size: rem(16);
 	transition: all 0.3s ease;
 	outline: none;
+
 	&._form-focus {
 		border: 0.5px solid $colorSilver;
 	}
 	&._form-error {
 		border-color: #e32d2d;
 		color: #e32d2d;
+
+		&::placeholder {
+			color: #e32d2d;
+		}
 	}
 
 	@media (any-hover: hover) {
@@ -53,7 +63,7 @@ textarea {
 	}
 
 	&:not(:last-child) {
-		margin-bottom: rem(20);
+		margin-bottom: rem(10);
 	}
 }
 
